@@ -66,15 +66,37 @@ test("displays the correct links", () => {
 
 // Newsletter Form - Initial State
 test("the form includes text inputs for name and email address", () => {
-  // your test code here
+  render(<App />);
+
+  const nameInput = screen.getByLabelText(/name/i);
+  const emailInput = screen.getByLabelText(/email/i);
+
+  expect(nameInput).toBeInTheDocument();
+  expect(emailInput).toBeInTheDocument();
 });
 
 test("the form includes three checkboxes to select areas of interest", () => {
-  // your test code here
+  render(<App />);
+
+  const techCheckbox = screen.getByLabelText(/technology/i);
+  const designCheckbox = screen.getByLabelText(/design/i);
+  const businessCheckbox = screen.getByLabelText(/business/i);
+
+  expect(techCheckbox).toBeInTheDocument();
+  expect(designCheckbox).toBeInTheDocument();
+  expect(businessCheckbox).toBeInTheDocument();
 });
 
 test("the checkboxes are initially unchecked", () => {
-  // your test code here
+  render(<App />);
+
+  const techCheckbox = screen.getByLabelText(/technology/i);
+  const designCheckbox = screen.getByLabelText(/design/i);
+  const businessCheckbox = screen.getByLabelText(/business/i);
+
+  expect(techCheckbox).not.toBeChecked();
+  expect(designCheckbox).not.toBeChecked();
+  expect(businessCheckbox).not.toBeChecked();
 });
 
 // Newsletter Form - Adding Responses

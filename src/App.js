@@ -18,6 +18,33 @@ function App() {
         <a href="https://github.com">GitHub</a>
         <a href="https://linkedin.com">LinkedIn</a>
       </div>
+
+      <h2>Newsletter Signup</h2>
+      <form>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input type="email" id="email" name="email" />
+        </div>
+        <fieldset>
+          <legend>Areas of Interest:</legend>
+          <div>
+            <input type="checkbox" id="technology" name="interests" value="technology" />
+            <label htmlFor="technology">Technology</label>
+          </div>
+          <div>
+            <input type="checkbox" id="design" name="interests" value="design" />
+            <label htmlFor="design">Design</label>
+          </div>
+          <div>
+            <input type="checkbox" id="business" name="interests" value="business" />
+            <label htmlFor="business">Business</label>
+          </div>
+        </fieldset>
+      </form>
     </main>
   );
 }
